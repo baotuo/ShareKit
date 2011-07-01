@@ -104,7 +104,6 @@
 		43C91DF511EBAE4800F31FAE /* SHKTumblr.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C91DF411EBAE4800F31FAE /* SHKTumblr.m */; };
 		43D1DEF011D5CDD200550D75 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D1DEEF11D5CDD200550D75 /* SystemConfiguration.framework */; };
 		43EF406E11D3FFF800B1F700 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EF406D11D3FFF800B1F700 /* Security.framework */; };
-		43FF9C7412270E9F00ADE53C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43FF9C7212270E9F00ADE53C /* Localizable.strings */; };
 		854CD5B513388C7F000AE00E /* SHKItem+EDAMNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 854CD5B413388C7F000AE00E /* SHKItem+EDAMNote.m */; };
 		ACA483421343679900A03B1F /* SHKSinaWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA4833F1343679900A03B1F /* SHKSinaWeibo.m */; };
 		ACA483431343679900A03B1F /* SHKSinaWeiboForm.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA483411343679900A03B1F /* SHKSinaWeiboForm.m */; };
@@ -112,6 +111,8 @@
 		ACA8F4791345E3E80058C93D /* SHKDoubanForm.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA8F4771345E3E80058C93D /* SHKDoubanForm.m */; };
 		ACA8F53D1347087D0058C93D /* SHKTencentWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA8F53A1347087D0058C93D /* SHKTencentWeibo.m */; };
 		ACA8F53E1347087D0058C93D /* SHKTencentWeiboForm.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA8F53C1347087D0058C93D /* SHKTencentWeiboForm.m */; };
+		EDC0C8F113BE263F00FC2DF8 /* SHKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDC0C8EF13BE263F00FC2DF8 /* SHKLocalizable.strings */; };
+		EDC0C8FF13BE266700FC2DF8 /* SHKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDC0C8F513BE266700FC2DF8 /* SHKLocalizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,17 +165,10 @@
 		4379F2B01291AC9700D2A41E /* SHKEvernote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKEvernote.h; sourceTree = "<group>"; };
 		4379F2B11291AC9700D2A41E /* SHKEvernote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKEvernote.m; sourceTree = "<group>"; };
 		4379F2B21291AC9700D2A41E /* SHKEvernote.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SHKEvernote.md; sourceTree = "<group>"; };
-		4379F2D31291ACD800D2A41E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Classes/ShareKit/Localization/ja.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
-		4379F2D41291ACE600D2A41E /* eu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = eu; path = Classes/ShareKit/Localization/eu.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
-		4379F2D51291ACF700D2A41E /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = Classes/ShareKit/Localization/nl.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
-		4379F2D61291AD0300D2A41E /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = Classes/ShareKit/Localization/vi.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
-		4379F2D71291AD0F00D2A41E /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = Classes/ShareKit/Localization/zh_CN.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		4379F2E81291AE5700D2A41E /* NSData+md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+md5.h"; sourceTree = "<group>"; };
 		4379F2E91291AE5700D2A41E /* NSData+md5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+md5.m"; sourceTree = "<group>"; };
-		4379F3251291B86500D2A41E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Classes/ShareKit/Localization/fr.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		4379F3B01291C45700D2A41E /* SHKTextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKTextMessage.h; sourceTree = "<group>"; };
 		4379F3B11291C45700D2A41E /* SHKTextMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKTextMessage.m; sourceTree = "<group>"; };
-		4379F3EA1291CA1700D2A41E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = Classes/ShareKit/Localization/ko.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		43A5367411DBE3B9004A1712 /* SHKOAuthSharer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKOAuthSharer.h; sourceTree = "<group>"; };
 		43A5367511DBE3B9004A1712 /* SHKOAuthSharer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKOAuthSharer.m; sourceTree = "<group>"; };
 		43A5367611DBE3B9004A1712 /* SHKSharer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKSharer.h; sourceTree = "<group>"; };
@@ -314,8 +308,6 @@
 		43C91DF411EBAE4800F31FAE /* SHKTumblr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKTumblr.m; sourceTree = "<group>"; };
 		43D1DEEF11D5CDD200550D75 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		43EF406D11D3FFF800B1F700 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		43FF9C7312270E9F00ADE53C /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Classes/ShareKit/Localization/en.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
-		43FF9C7512270EB900ADE53C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Classes/ShareKit/Localization/de.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		854CD5B313388C7F000AE00E /* SHKItem+EDAMNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SHKItem+EDAMNote.h"; sourceTree = "<group>"; };
 		854CD5B413388C7F000AE00E /* SHKItem+EDAMNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SHKItem+EDAMNote.m"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ShareKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ShareKit-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
@@ -331,6 +323,15 @@
 		ACA8F53A1347087D0058C93D /* SHKTencentWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKTencentWeibo.m; sourceTree = "<group>"; };
 		ACA8F53B1347087D0058C93D /* SHKTencentWeiboForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKTencentWeiboForm.h; sourceTree = "<group>"; };
 		ACA8F53C1347087D0058C93D /* SHKTencentWeiboForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKTencentWeiboForm.m; sourceTree = "<group>"; };
+		EDC0C8F613BE266700FC2DF8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SHKLocalizable.strings; sourceTree = "<group>"; };
+		EDC0C8F713BE266700FC2DF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SHKLocalizable.strings; sourceTree = "<group>"; };
+		EDC0C8F813BE266700FC2DF8 /* eu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = eu; path = eu.lproj/SHKLocalizable.strings; sourceTree = "<group>"; };
+		EDC0C8F913BE266700FC2DF8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/SHKLocalizable.strings; sourceTree = "<group>"; };
+		EDC0C8FA13BE266700FC2DF8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SHKLocalizable.strings; sourceTree = "<group>"; };
+		EDC0C8FB13BE266700FC2DF8 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/SHKLocalizable.strings; sourceTree = "<group>"; };
+		EDC0C8FC13BE266700FC2DF8 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/SHKLocalizable.strings; sourceTree = "<group>"; };
+		EDC0C8FD13BE266700FC2DF8 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/SHKLocalizable.strings; sourceTree = "<group>"; };
+		EDC0C8FE13BE266700FC2DF8 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/SHKLocalizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -571,7 +572,7 @@
 				43A5367311DBE3B9004A1712 /* Base Sharer Classes */,
 				43A5367811DBE3B9004A1712 /* Categories */,
 				43A5367B11DBE3B9004A1712 /* Helpers */,
-				43FF9C7112270E7F00ADE53C /* Localization */,
+				EDC0C8F413BE266700FC2DF8 /* Localization */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -908,14 +909,6 @@
 			path = Tumblr;
 			sourceTree = "<group>";
 		};
-		43FF9C7112270E7F00ADE53C /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-				43FF9C7212270E9F00ADE53C /* Localizable.strings */,
-			);
-			name = Localization;
-			sourceTree = "<group>";
-		};
 		ACA4833D1343679900A03B1F /* Sina Weibo */ = {
 			isa = PBXGroup;
 			children = (
@@ -948,6 +941,15 @@
 			);
 			path = "Tencent Weibo";
 			sourceTree = "<group>";
+		};
+		EDC0C8F413BE266700FC2DF8 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				EDC0C8F513BE266700FC2DF8 /* SHKLocalizable.strings */,
+			);
+			name = Localization;
+			path = Classes/ShareKit/Localization;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -1014,7 +1016,8 @@
 				43A5382811DBE480004A1712 /* example.pdf in Resources */,
 				43A5382911DBE480004A1712 /* sanFran.jpg in Resources */,
 				43C91D1D11EB963600F31FAE /* MainWindow-iPad.xib in Resources */,
-				43FF9C7412270E9F00ADE53C /* Localizable.strings in Resources */,
+				EDC0C8F113BE263F00FC2DF8 /* SHKLocalizable.strings in Resources */,
+				EDC0C8FF13BE266700FC2DF8 /* SHKLocalizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1122,20 +1125,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		43FF9C7212270E9F00ADE53C /* Localizable.strings */ = {
+		EDC0C8EF13BE263F00FC2DF8 /* SHKLocalizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				43FF9C7312270E9F00ADE53C /* en */,
-				43FF9C7512270EB900ADE53C /* de */,
-				4379F2D31291ACD800D2A41E /* ja */,
-				4379F2D41291ACE600D2A41E /* eu */,
-				4379F2D51291ACF700D2A41E /* nl */,
-				4379F2D61291AD0300D2A41E /* vi */,
-				4379F2D71291AD0F00D2A41E /* zh_CN */,
-				4379F3251291B86500D2A41E /* fr */,
-				4379F3EA1291CA1700D2A41E /* ko */,
 			);
-			name = Localizable.strings;
+			name = SHKLocalizable.strings;
+			path = /Users/baotuo/Projects/rakuraku/idaily/Classes/SubModules/ShareKit/Classes/ShareKit/Core;
+			sourceTree = "<absolute>";
+		};
+		EDC0C8F513BE266700FC2DF8 /* SHKLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDC0C8F613BE266700FC2DF8 /* de */,
+				EDC0C8F713BE266700FC2DF8 /* en */,
+				EDC0C8F813BE266700FC2DF8 /* eu */,
+				EDC0C8F913BE266700FC2DF8 /* fr */,
+				EDC0C8FA13BE266700FC2DF8 /* ja */,
+				EDC0C8FB13BE266700FC2DF8 /* ko */,
+				EDC0C8FC13BE266700FC2DF8 /* nl */,
+				EDC0C8FD13BE266700FC2DF8 /* vi */,
+				EDC0C8FE13BE266700FC2DF8 /* zh_CN */,
+			);
+			name = SHKLocalizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
