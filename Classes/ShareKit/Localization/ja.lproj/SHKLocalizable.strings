@@ -39,7 +39,7 @@
 "Create a free account at %@" = "%@で無料の新規アカウントを作成";
 "Create an account at %@" = "%@で新規アカウントを作成";
 
-"Send to Twitter" = "ツイッターでつぶやく";
+"Send to Twitter" = "つぶやく";
 
 "Message is too long" = "メッセージが長すぎます";
 "Twitter posts can only be 140 characters in length." = "ツイッターは140文字までしか送れません";
