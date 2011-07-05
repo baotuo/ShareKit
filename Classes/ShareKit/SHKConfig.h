@@ -55,7 +55,8 @@
 // Facebook - http://www.facebook.com/developers
 // If SHKFacebookUseSessionProxy is enabled then SHKFacebookSecret is ignored and should be left blank
 
-#define SHKFacebookAppID             @""
+#define SHKFacebookAppID            @""
+#define SHKFacebookPermissions      @""
 
 // Read It Later - http://readitlaterlist.com/api/?shk
 #define SHKReadItLaterKey			@""

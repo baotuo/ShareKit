@@ -77,8 +77,8 @@ static Facebook *facebook;
 }
 
 - (void)promptAuthorization {
-    [facebook authorize:[NSArray arrayWithObjects:@"read_stream", @"publish_stream", @"offline_access", nil]
-               delegate:self];
+    NSArray *permissions = [[SHKFacebookPermissions stringByReplacingOccurrencesOfString:@" " withString:@""] componentsSeparatedByString:@","];
+    [facebook authorize:permissions delegate:self];
 }
 
 + (void)logout {
