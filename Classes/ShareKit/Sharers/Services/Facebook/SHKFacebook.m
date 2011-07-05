@@ -85,6 +85,8 @@ static Facebook *facebook;
 	NSString *sharerId = [self sharerId];
     [SHK removeAuthValueForKey:@"accessToken" forSharer:sharerId];
     [SHK removeAuthValueForKey:@"expirationDate" forSharer:sharerId];
+    
+    [facebook logout:nil];
 }
 
 #pragma mark - Send
