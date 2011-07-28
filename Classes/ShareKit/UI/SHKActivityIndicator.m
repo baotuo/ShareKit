@@ -42,14 +42,11 @@ static SHKActivityIndicator *currentIndicator = nil;
 {
 	if (currentIndicator == nil)
 	{
-		UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+		UIView *rootView = [[UIApplication sharedApplication] keyWindow].rootViewController.view;
 		
 		CGFloat width = 160;
 		CGFloat height = 160;
-		CGRect centeredFrame = CGRectMake(round(keyWindow.bounds.size.width/2 - width/2),
-										  round(keyWindow.bounds.size.height/2 - height/2),
-										  width,
-										  height);
+		CGRect centeredFrame = CGRectIntegral(CGRectMake(rootView.bounds.size.width/2 - width/2, rootView.bounds.size.height/2 - height/2, width, height));
 		
 		currentIndicator = [[SHKActivityIndicator alloc] initWithFrame:centeredFrame];
 		
@@ -62,14 +59,7 @@ static SHKActivityIndicator *currentIndicator = nil;
 		currentIndicator.userInteractionEnabled = NO;
 		currentIndicator.autoresizesSubviews = YES;
 		currentIndicator.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |  UIViewAutoresizingFlexibleTopMargin |  UIViewAutoresizingFlexibleBottomMargin;
-		
-		[currentIndicator setProperRotation:NO];
-		
-		[[NSNotificationCenter defaultCenter] addObserver:currentIndicator
-												 selector:@selector(setProperRotation)
-													 name:UIDeviceOrientationDidChangeNotification
-												   object:nil];
-	}
+    }
 	
 	return currentIndicator;
 }
@@ -78,8 +68,13 @@ static SHKActivityIndicator *currentIndicator = nil;
 
 - (void)dealloc
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
-	
+    if (currentIndicator) {
+        if ([currentIndicator superview]) {
+            [currentIndicator removeFromSuperview];
+        }
+        [currentIndicator release];
+        currentIndicator = nil;
+    }
 	[centerMessageLabel release];
 	[subMessageLabel release];
 	[spinner release];
@@ -91,8 +86,9 @@ static SHKActivityIndicator *currentIndicator = nil;
 
 - (void)show
 {	
-	if ([self superview] != [[UIApplication sharedApplication] keyWindow]) 
-		[[[UIApplication sharedApplication] keyWindow] addSubview:self];
+	if ([self superview] != [[UIApplication sharedApplication] keyWindow].rootViewController.view) 
+        [self removeFromSuperview];
+		[[[UIApplication sharedApplication] keyWindow].rootViewController.view addSubview:self];
 	
 	[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hide) object:nil];
 	
@@ -140,7 +136,6 @@ static SHKActivityIndicator *currentIndicator = nil;
 		return;
 	
 	[currentIndicator removeFromSuperview];
-	currentIndicator = nil;
 }
 
 - (void)displayActivity:(NSString *)m
@@ -241,40 +236,4 @@ static SHKActivityIndicator *currentIndicator = nil;
 	[self addSubview:spinner];
 	[spinner startAnimating];
 }
-
-#pragma mark -
-#pragma mark Rotation
-
-- (void)setProperRotation
-{
-	[self setProperRotation:YES];
-}
-
-- (void)setProperRotation:(BOOL)animated
-{
-	UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
-	
-	if (animated)
-	{
-		[UIView beginAnimations:nil context:NULL];
-		[UIView setAnimationDuration:0.3];
-	}
-	
-	if (orientation == UIDeviceOrientationPortraitUpsideDown)
-		self.transform = CGAffineTransformRotate(CGAffineTransformIdentity, SHKdegreesToRadians(180));	
-		
-	else if (orientation == UIDeviceOrientationPortrait)
-		self.transform = CGAffineTransformRotate(CGAffineTransformIdentity, SHKdegreesToRadians(0)); 
-	
-	else if (orientation == UIDeviceOrientationLandscapeLeft)
-		self.transform = CGAffineTransformRotate(CGAffineTransformIdentity, SHKdegreesToRadians(90));	
-	
-	else if (orientation == UIDeviceOrientationLandscapeRight)
-		self.transform = CGAffineTransformRotate(CGAffineTransformIdentity, SHKdegreesToRadians(-90));
-	
-	if (animated)
-		[UIView commitAnimations];
-}
-
-
 @end

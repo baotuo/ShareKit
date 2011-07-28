@@ -53,7 +53,5 @@
 - (void)setCenterMessage:(NSString *)message;
 - (void)setSubMessage:(NSString *)message;
 - (void)showSpinner;
-- (void)setProperRotation;
-- (void)setProperRotation:(BOOL)animated;
 
 @end
