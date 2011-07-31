@@ -146,11 +146,8 @@
 
 - (NSString *)getValue
 {
-	switch (settings.type) 
-	{
-		case SHKFormFieldTypeSwitch:
-			return toggle.on ? SHKFormFieldSwitchOn : SHKFormFieldSwitchOff;
-			break;
+	if (settings.type == SHKFormFieldTypeSwitch) {
+        return toggle.on ? SHKFormFieldSwitchOn : SHKFormFieldSwitchOff;
 	}
 	
 	return textField.text;

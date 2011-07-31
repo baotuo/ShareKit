@@ -78,7 +78,7 @@ static Facebook *facebook;
 
 - (void)promptAuthorization {
     NSArray *permissions = [[SHKFacebookPermissions stringByReplacingOccurrencesOfString:@" " withString:@""] componentsSeparatedByString:@","];
-    [facebook authorize:permissions delegate:self];
+    [facebook authorize:permissions delegate:self localAppId:SHKFacebookLocalAppID];
 }
 
 + (void)logout {
