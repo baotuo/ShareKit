@@ -320,7 +320,7 @@
 
 - (void)sendStatus
 {
-	OAMutableURLRequest *oRequest = [[OAMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1/statuses/update.json"]
+	OAMutableURLRequest *oRequest = [[OAMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/update.json"]
 																	consumer:consumer
 																	   token:accessToken
 																	   realm:nil
@@ -365,10 +365,9 @@
 		NSScanner *scanner = [NSScanner scannerWithString:string];
 		
 		// skip until error message
-		[scanner scanUpToString:@"\"error\":\"" intoString:nil];
+        [scanner scanUpToString:@"\"message\":\"" intoString:nil];
 		
-		
-		if ([scanner scanString:@"\"error\":\"" intoString:nil])
+		if ([scanner scanString:@"\"message\":\"" intoString:nil])
 		{
 			// get the message until the closing double quotes
 			[scanner scanUpToCharactersFromSet:[NSCharacterSet characterSetWithCharactersInString:@"\""] intoString:&errorMessage];
@@ -397,9 +396,9 @@
 	
 	NSURL *serviceURL = nil;
 	if([item customValueForKey:@"profile_update"]){
-		serviceURL = [NSURL URLWithString:@"http://api.twitter.com/1/account/update_profile_image.json"];
+		serviceURL = [NSURL URLWithString:@"http://api.twitter.com/1.1/account/update_profile_image.json"];
 	} else {
-		serviceURL = [NSURL URLWithString:@"https://api.twitter.com/1/account/verify_credentials.json"];
+		serviceURL = [NSURL URLWithString:@"https://api.twitter.com/1.1/account/verify_credentials.json"];
 	}
 	
 	OAMutableURLRequest *oRequest = [[OAMutableURLRequest alloc] initWithURL:serviceURL
@@ -427,7 +426,7 @@
 													  realm:@"http://api.twitter.com/"
 										  signatureProvider:signatureProvider];
 		[oRequest setHTTPMethod:@"POST"];
-		[oRequest setValue:@"https://api.twitter.com/1/account/verify_credentials.json" forHTTPHeaderField:@"X-Auth-Service-Provider"];
+		[oRequest setValue:@"https://api.twitter.com/1.1/account/verify_credentials.json" forHTTPHeaderField:@"X-Auth-Service-Provider"];
 		[oRequest setValue:oauthHeader forHTTPHeaderField:@"X-Verify-Credentials-Authorization"];
 	}
 	
@@ -530,7 +529,7 @@
 	// remove it so in case of other failures this doesn't get hit again
 	[item setCustomValue:nil forKey:@"followMe"];
 	
-	OAMutableURLRequest *oRequest = [[OAMutableURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://api.twitter.com/1/friendships/create/%@.json", SHKTwitterUsername]]
+	OAMutableURLRequest *oRequest = [[OAMutableURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://api.twitter.com/1.1/friendships/create/%@.json", SHKTwitterUsername]]
 																	consumer:consumer
 																	   token:accessToken
 																	   realm:nil
